@@ -5,7 +5,7 @@
     menu: document.querySelector('.backdrop'),
     menuItem: document.querySelector('.mob-menu')
   };
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  // refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   refs.menu.addEventListener('click', removeMenu);
   function toggleMenu() {
