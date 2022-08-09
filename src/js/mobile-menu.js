@@ -9,15 +9,14 @@
   const mobileMenuContacts = document.querySelector('#contacts-link');
 
   const toggleMenu = () => {
-    const isMenuOpen = 
-    openMenuBtn.getAttribute(('aria-expanded') === 'true' || false);
+    const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
 
     const scrollLockMethod = !isMenuOpen
     ? 'disableBodyScroll'
     : 'enableBodyScroll';
-  bodyScrollLock([scrollLockMethod](document.body));
+  bodyScrollLock[scrollLockMethod](document.body);
 
   };
 
@@ -37,17 +36,3 @@
     openMenuBtn.setAttribute('aria-expanded', false);
   });
 })();
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector('[data-modal-opens]'),
-//     closeModalBtn: document.querySelector('[data-modal-closes]'),
-//     modal: document.querySelector('[data-modals]'),
-//   };
-
-//   refs.openModalBtn.addEventListener('click', toggleModal);
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//   }
-// })();
